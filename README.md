@@ -1,4 +1,5 @@
-# lab_Ubuntu
+# Projet : Lab Ubuntu
+## Maîtrise et Configuration d'un Environnement Linux Professionnel
 
 ## 📊 État d'avancement du projet
 

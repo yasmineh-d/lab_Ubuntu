@@ -1,193 +1,224 @@
 ---
 marp: true
 theme: default
+_class: lead
+_paginate: false
 paginate: true
+backgroundColor: #ffffff
 style: |
-  /* Palette de couleurs Ubuntu officielle (Aubergine et Orange) */
   section {
-    font-family: 'Ubuntu', 'Inter', 'Segoe UI', sans-serif;
-    font-size: 28px;
-    background-color: #f8f9fa; /* Gris très clair et épuré */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
     color: #333333;
-    padding: 70px 100px;
+    line-height: 1.6;
+    padding: 60px 80px;
   }
 
-  /* Titre principal pour les slides classiques */
+  /* Forcer la couleur Orange sur le titre et le sous-titre */
   h1 { 
-    color: #E95420; /* Orange Ubuntu */
-    font-size: 2.5em; 
+    color: #E95420 !important; 
+    font-size: 2.8em; 
+    margin-top: 100px; 
+    text-align: left; 
     font-weight: 700;
   }
 
-  /* Titres de sections (h2) */
-  h2 { 
-    color: #77216F; /* Aubergine Canonical */
-    font-size: 1.8em; 
-    border-bottom: 3px solid #E95420; 
-    padding-bottom: 12px; 
-    margin-bottom: 40px; 
-  }
-
-  /* Sous-titres (h3) */
   h3 { 
+    color: #E95420 !important; 
+    text-align: left; 
+    margin-top: 0; 
+    font-weight: 600;
+  }
+
+  h2 { 
+    color: #77216F !important; 
+    font-size: 2.2em; 
+    border-bottom: 4px solid #E95420; 
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  footer { 
+    width: 100%; 
+    text-align: right; 
+    font-size: 14px; 
     color: #E95420; 
-    font-size: 1.4em; 
-    margin-top: 30px; 
   }
 
-  /* Espacement des puces pour aérer le texte */
-  li {
-    margin-bottom: 12px;
-    line-height: 1.4;
-  }
-
-  /* Mise en valeur du code rapide */
-  code { 
-    background: #e9ecef; 
-    color: #c71610; 
-    border-radius: 6px; 
-    padding: 4px 8px; 
-    font-family: 'JetBrains Mono', monospace; 
-  }
-
-  /* Design professionnel des citations (astuces/bonus) sous forme de "cartes" */
-  blockquote { 
-    background: white; 
-    border-left: 6px solid #E95420; 
-    border-radius: 8px; 
-    padding: 20px 25px; 
-    margin-top: 30px; 
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); 
-    font-style: italic; 
-    font-size: 0.9em;
-  }
-  
-  blockquote strong {
-    color: #77216F;
-  }
-
-  /* --- Design d'une slide titre ("lead") --- */
-  section.lead {
-    background: linear-gradient(135deg, #77216F 0%, #2C001E 100%); /* Dégradé Aubergine */
-    color: white;
-    text-align: center;
+  .logo-header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    position: absolute;
+    top: 35px;   
+    left: 60px;
+    right: 60px;
   }
 
-  section.lead h1 {
-    color: white;
-    font-size: 4em;
-    border-bottom: none;
-    margin: 0;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  .logo-header img { 
+    height: 80px; 
+    object-fit: contain;
   }
+
+  .ubuntu-logo {
+    height: 90px !important;
+  }
+
+  .sommaire-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .sommaire-item {
+    display: flex;
+    align-items: center;
+    background: #fdf2ee;
+    border-radius: 12px;
+    padding: 15px 20px;
+    border-left: 6px solid #77216F;
+    color: #77216F;
+    font-weight: 600;
+  }
+
+  .sommaire-num {
+    background: #E95420; 
+    color: white; 
+    width: 35px; 
+    height: 35px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-radius: 50%; 
+    font-weight: bold; 
+    margin-right: 15px; 
+    flex-shrink: 0;
+  }
+
+  .dt-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 6px solid #77216F;
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  li::before {
+    content: "•";
+    color: #E95420;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  .highlight { color: #E95420 !important; font-weight: bold; }
+  .purple { color: #77216F !important; font-weight: bold; }
+---
+
+<div class="logo-header">
+  <img src="photos/ofppt-logo.png" alt="OFPPT">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_no-wordmark_orange.svg/512px-Logo-ubuntu_no-wordmark_orange.svg.png" class="ubuntu-logo" alt="Ubuntu">
+  <img src="photos/logo-solicode.png" alt="Solicode">
+</div>
+
+# <span style="color: #E95420 !important;">**Projet : Lab Ubuntu**</span>
+### <span style="color: #E95420 !important;">**Exploration et Configuration du Système d'Exploitation Open Source**</span>
+
+**Réalisée par :** <span class="highlight">Haddad Yasmine</span>  
+**Encadré par :** <span class="highlight">M. ESSARRAJ Fouad</span>  
+**Filière :** <span class="purple">Développement Web et Mobile</span>
+
+---
+
+## Sommaire
+
+<div class="sommaire-grid">
+  <div class="sommaire-item"><div class="sommaire-num">1</div>Introduction & Contexte</div>
+  <div class="sommaire-item"><div class="sommaire-num">2</div>Expérience Utilisateur</div>
+  <div class="sommaire-item"><div class="sommaire-num">3</div>Gestion Logicielle</div>
+  <div class="sommaire-item"><div class="sommaire-num">4</div>Analyse Critique</div>
+  <div class="sommaire-item"><div class="sommaire-num">5</div>État d'avancement</div>
+  <div class="sommaire-item"><div class="sommaire-num">6</div>Conclusion</div>
+</div>
+
+---
+
+## 1. 🌟 Introduction & Contexte
+### Qu'est-ce qu'Ubuntu ?
+- **Origine** : Basé sur Debian, développé par **Canonical**.
+- **LTS** : Support long terme (5 à 10 ans).
+- **Philosophie** : Éthique Open Source et partage.
+
+---
+
+## 2. 📱 Expérience Utilisateur
+### Interface GNOME
+- **Modernité** : Une interface épurée.
+- **Activités** : Gestion intelligente des fenêtres.
+
+---
+
+## 3. 📥 Gestion des Applications
+### Écosystème Logiciel
+- **App Center** : Boutique moderne.
+- **Snap** : Format universel toujours à jour.
+
+---
+
+## 4. ⚖️ Analyse Critique
+
+<div class="sommaire-grid">
+  <div class="dt-card" style="border-top-color: #27ae60;">
+    <h4 style="color: #27ae60;">✅ Atouts</h4>
+    <ul>
+      <li>Gratuité et Éthique</li>
+      <li>Environnement Développeur</li>
+    </ul>
+  </div>
+  <div class="dt-card" style="border-top-color: #e74c3c;">
+    <h4 style="color: #e74c3c;">❌ Limites</h4>
+    <ul>
+      <li>Logiciels spécialisés (Adobe)</li>
+      <li>Support Gaming en transition</li>
+      <li>Courbe d'apprentissage CLI</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## 5. 📊 État d'avancement du Projet
+
+<div class="dt-card" style="border-top-color: #f39c12;">
+  <h4 style="color: #77216F;">Rapport de session</h4>
+  <ul>  
+    <li><strong>✅ Terminées :</strong> Documentation, structure Marp, design thématique Ubuntu.</li>
+    <li><strong>🚧 En cours :</strong> Version HTML interactive.</li>
+    <li><strong>🚀 Suivant :</strong> Démonstrations terminal.</li>
+  </ul>
+</div>
+
+---
+
+## 6. 🏁 Conclusion
+- Ubuntu est le standard de la **Liberté** et de la **Performance**.
+- Un outil indispensable pour tout développeur moderne.
+
+> "L'Open Source est une communauté mondiale."
+
 ---
 
 <!-- _class: lead -->
-# 🎤 Présentation : Ubuntu 🐧
 
----
-
-## 1. 🌟 Introduction
-- 💻 Ubuntu = système d’exploitation  
-- 🖥️ Comme Windows ou Mac  
-- 🆓 Gratuit  
-- 🐧 Basé sur Linux  
-
----
-
-- 🤝 Nom "Ubuntu" = partage, communauté  
-
-- 🎯 Pour qui ?  
-  - 🐣 Débutants  
-  - 👨‍💻 Développeurs  
-  - 🌍 Tout le monde  
-
-> **👉 🗣️ Phrase simple :**
-> "Ubuntu est un système gratuit et facile."
-
----
-
-## 2. 📱 Interface
-- 🖼️ Bureau : GNOME  
-
-- ⚙️ Éléments :
-  - 📌 Dock (barre à gauche)  
-  - 🗂️ Applications  
-  - 🔋 Barre en haut (heure, Wi-Fi)  
-
----
-
-- 🔧 Paramètres :
-  - 📶 Wi-Fi  
-  - 🔵 Bluetooth  
-  - 🎨 Thème  
-
----
-
-- 📂 Fichiers :
-  - 📁 Explorateur (Nautilus)  
-
-> **👉 💡 Astuce :** Montrez des images pour illustrer.
-
----
-
-## 3. 📥 Installer des apps
-- 🛍️ Ubuntu Software (boutique)  
-- ⚡ Installer en 1 clic  
-
-- 🎒 Exemples :
-  - 🦊 Firefox (internet)  
-  - 📝 LibreOffice (Word, Excel)  
----
-- 🛡️ Sécurité :
-  - ✅ Apps sûres  
-  - 🚫 Pas de virus  
-
-> **👉 🎁 Bonus :**
-> - ⌨️ Terminal (option)
-> - 💻 Exemple : `sudo apt install`
-
----
-
-## 4. ⚖️ Avantages / Inconvénients
-
-### ✅ Avantages
-- 💸 Gratuit  
-- 🔒 Sécurisé  
-- 🚀 Rapide  
-- 🛠️ Bon pour coder  
----
-### ❌ Inconvénients
-- ⚠️ Certains logiciels ne marchent pas  
-- 🎮 Jeux limités  
-- ⏳ Petit temps d’adaptation  
-
----
-
-## 📊 État d'avancement
-### ✅ Tâches terminées
-- Recherche et structure de base
-- Design du thème (Aubergine/Orange)
-- Sections Intro, Interface & Avantages
-
-### 🚧 En cours / À venir
-- Finalisation des démos (Terminal)
-- Ajout de visuels restants
-- Préparation de la démonstration live
-
----
-
-## 5. 🏁 Conclusion
-- 🏅 Ubuntu = simple + gratuit + fiable  
-
-- 🏆 Bon pour :
-  - 📚 Études  
-  - 💼 Travail  
-  - 🧑‍💻 Programmation  
-
-> **👉 💥 Phrase finale :**
-> "Ubuntu est simple, rapide et gratuit."
+# **Merci pour votre attention !**
