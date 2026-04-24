@@ -168,6 +168,19 @@ style: |
 
 ---
 
+## 📊 État d'avancement
+### ✅ Tâches terminées
+- Recherche et structure de base
+- Design du thème (Aubergine/Orange)
+- Sections Intro, Interface & Avantages
+
+### 🚧 En cours / À venir
+- Finalisation des démos (Terminal)
+- Ajout de visuels restants
+- Préparation de la démonstration live
+
+---
+
 ## 5. 🏁 Conclusion
 - 🏅 Ubuntu = simple + gratuit + fiable  
 
