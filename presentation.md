@@ -23,11 +23,23 @@ style: |
     font-weight: 700;
   }
 
+  section.lead h1 {
+    color: #E95420 !important;
+  }
+
   h3 { 
     color: #E95420 !important; 
     text-align: left; 
     margin-top: 0; 
     font-weight: 600;
+  }
+
+  section.lead h3 {
+    color: #E95420 !important;
+  }
+
+  section.lead {
+    color: #E95420 !important;
   }
 
   h2 { 
@@ -128,7 +140,6 @@ style: |
 
 <div class="logo-header">
   <img src="photos/ofppt-logo.png" alt="OFPPT">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_no-wordmark_orange.svg/512px-Logo-ubuntu_no-wordmark_orange.svg.png" class="ubuntu-logo" alt="Ubuntu">
   <img src="photos/logo-solicode.png" alt="Solicode">
 </div>
 
